@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main">
+        <h1 class="heading">
+            <span class="red">Simple</span> <span class="yellow">Calculator</span>
+        </h1>
+        <div class="calc-container">
+            <div class="display-container">
+                <h2 class="content" align="right" id="ref">yash calc</h2>
+                <h2 class="content" align="right" id="main"></h2>
+                <h2 class="content" align="right" id="ans"></h2>
+            </div>
+            <div class="btns-container">
+                <div class="btn-divison">
+                    <button class="btn">
+                        <ion-icon name="expand-outline" class="expand"></ion-icon>
+                    </button>
+                    <button class="btn clear">AC</button>
+                    <button class="btn back">
+                        <ion-icon name="backspace-outline" class="icon"></ion-icon>
+                    </button>
+                    <button class="btn symb">/</button>
+                </div>
+                <div class="btn-divison">
+                    <button class="btn num">7</button>
+                    <button class="btn num">8</button>
+                    <button class="btn num">9</button>
+                    <button class="btn symb">*</button>
+                </div>
+                <div class="btn-divison">
+                    <button class="btn num">4</button>
+                    <button class="btn num">5</button>
+                    <button class="btn num">6</button>
+                    <button class="btn symb">+</button>
+                </div>
+                <div class="btn-divison">
+                    <button class="btn num">1</button>
+                    <button class="btn num">2</button>
+                    <button class="btn num">3</button>
+                    <button class="btn symb">-</button>
+                </div>
+                <div class="btn-divison">
+                    <button class="btn num">.</button>
+                    <button class="btn num">0</button>
+                    <button class="btn symb">%</button>
+                    <button class="btn" id="submit">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            height: 100vh;
+            width: 100%;
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+        }
+        .heading{
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 15px;
+        }
+        .yellow{
+            color:steelblue;
+        }
+        .red{
+            color:rgb(250, 1, 1);
+        }
+        .calc-container{
+            height:500px;
+            width: 300px;
+            border: 1px solid black;
+            box-shadow: 5px 5px 5px 5px black;
+            background-color: white;
+            border-radius: 20px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; */
+        }
+        .display-container{
+            width:95%;
+            background-color: black;
+            height: 150px;
+            margin: 20px auto;
+            border-radius: 20px;
+            
+        }
+        .btns-container{
+            width: 95%;
+            height: 300px;
+            background-color: white;
+            border: 2px solid black;
+            margin: -5px auto 0 auto;
+            border-radius: 10px;
+        }
+        .content{
+            margin-right: 20px;
+            overflow: hidden;
+            margin-left:20px;
+        }
+        #main{
+            margin-top:50px;
+            margin-bottom: -5px;
+            font-size: 40px;
+        }
+        #ans{
+            font-weight: 100;
+            color: #aaa;
+        }
+        .btns-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .btn-divison{
+            width: 95%;
+            /* border:1px solid black; */
+            margin: auto auto;
+            display: flex;
+        }
+        .btn{
+            background-color: transparent;
+            border: none;
+            margin:auto;
+            font-size: 26px;
+            cursor: pointer;
+            /* border: 1px solid black; */
+            width: 50px;
+            height: 50px;
+        }
+        .btn:hover{
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+        }
+        .btn-divison .btn:first-child{
+            margin-left: 15px;
+        }
+        .btn-divison .btn:last-child{
+            margin-right: 10px;
+        }
+        #submit{
+            border-radius: 50%;
+            background-color: orange;
+        }
+        #submit:hover{
+            color: black;
+        }
+    </style>
+    <script src="calc.js"></script>
+</body>
+</html>
